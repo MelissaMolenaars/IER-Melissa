@@ -98,13 +98,13 @@ end
 %plots
 figure(); step(SYS, T);
 title('Step response without control'); legend('SYS')
-ylabel('Amplitude (-)'); xlabel('Time');
+ylabel('Amplitude (deg)'); xlabel('Time');
 figure(); step(SYS_LQR, T);
 title('Step response with LQR control'); legend('SYS')
-ylabel('Amplitude (-)'); xlabel('Time');
+ylabel('Amplitude (deg)'); xlabel('Time');
 figure(); step(SYS_LQR, 'r', SYS_PP, '--b', T);
 title('Step response with control'); legend('LQR', 'PP')
-ylabel('Amplitude (-)'); xlabel('Time');
+ylabel('Amplitude (deg)'); xlabel('Time');
 
 %paramters
 Specs_LQR = stepinfo(SYS_LQR); %Overshoot, rise time, settling time, etc.
